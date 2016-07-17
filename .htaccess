@@ -1,0 +1,14 @@
+Options +FollowSymLinks 
+RewriteEngine on
+RewriteBase /
+
+#if for an existing directory or file
+RewriteCond %{SCRIPT_FILENAME} -d
+RewriteCond %{SCRIPT_FILENAME} -f
+#then do nothing
+RewriteRule . - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^work/([-a-zA-Z0-9+]+)/?$ /work/?page=$1 [L,NC]
+

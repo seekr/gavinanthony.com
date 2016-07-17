@@ -1,0 +1,66 @@
+{
+	"elements": {
+		"Unity": {
+			"title": "Unity",
+			"deflarge": "<p>Unity is <em>the look and feel of wholeness or oneness in a work of art</em></p><p>In works where unity is evident, the elements and principles work together. Where unity is lacking, the works may look disorganized, incomplete, or confusing.</p>"
+		},
+		"Color": {
+			"title": "Color",
+			"deflarge": "<p>Color is <em>an element made up of three distinct qualities: hue, intensity, and value.</em></p><p>When talking about a color or the differences between two colors, you can refer to any one or all of these qualities.</p>"
+		},
+		"Value": {
+			"title": " Value",
+			"deflarge": "<p>Value describes <em>lightness or darkness of a particular hue.</em></p><p>Sometimes <em>value</em> is an important element in design even when color appear to be absent.</p>"
+		},
+		"Line": {
+			"title": "Line",
+			"deflarge": "<p>Perhaps the simplest way to describe line is to refer to it as <em>a continous mark made on some surface by a moving point.</em></p><p>Line is an element that is the most difficult to describe, although most people know what it is and can easily think of several ways to create it.</p>"
+		},
+		"Texture": {
+			"title": "Texture",
+			"deflarge": "<p>Texture is <em>the element of art that refers to the waythings feel or look as if they might be touched.</em></p><p>Whenever you talk about the surface quality, or \"feel\" of an object, you are discussing its texture.</p>"
+		},
+		"Shape & Form": {
+			"title": "Shape & Form",
+			"deflarge": "<p>The term shape refers to <em>a two-dimensional area cleary set off by one or more of other visual elements, such as color, value, line, texture, or space.</em></p><p>Shapes are flat, and are limited to only two dimesions.</p><p>Form shares the same concepts as shape does, only it is a three-dimesional figure.</p>"
+		},
+		"Space": {
+			"title": "Space",
+			"deflarge": "<p>Space can be thought of as <em>the distance or area between, around, above, below, or within elements.</em></p><p>In some forms of design, space can be three-dimesional. In most cases of design, however, space is two dimensional.</p>"
+		}
+	},
+	"principles": {
+		"Balance": {
+			"title": "Balance",
+			"deflarge": "<p>Balance refers to <em>a way of combining elements to add a feeling of equilibrium or stability in a design.</em></p><p>Balance can either be symmetrical, asymmetrical, or radial.</p>"
+		},
+		"Emphasis": {
+			"title": "Emphasis",
+			"deflarge": "<p>Emphasis, or <em>contrast, is a way of combining elements to stress the differences between those elements.</em></p><p>Contrasting elements are often used to direct and focus the viewers attention on the most important parts of a design.</p>"
+		},
+		"Harmony": {
+			"title": "Harmony",
+			"deflarge": "<p>Harmony refers to <em>a way of combining similar elements in an design to accent their similarities.</em></p><p>It is accomplished through the use of repetitions and subtle, gradual changes.</p>"
+		},
+		"Variety": {
+			"title": "Variety",
+			"deflarge": "<p>Variety is <em>a way of combining elements in involved ways to create intricate and complicated relationships while retaining unity.</em></p><p>It is achieved through diversity and change. Designers turn to this principle when they want to increase visual interest in their works. A design made up of many different hues, values, lines, textures, and shapes would be described as complex.</p>"
+		},
+		"Graduation": {
+			"title": "Graduation",
+			"deflarge": "<p>Graduation refers to <em>a way of combining elements by using a series of gradual changes in those elements.</em></p><p>Examples of graduation include a gradual change from small shapes to large shapes or from a dark hue to a light hue. Unlike emphasis, which stresses sudden and abrupt changesin elements, graduation refers to an ordered, step by step change.</p>"
+		},
+		"Movement": {
+			"title": "Movement",
+			"deflarge": "<p>Movement is <em>the principle of art used to create the look and feeling off action and to guide the viewers eye throughout the work of art.</em></p><p>Movement is also used to direct the viewers attention to a center of interest, or to make certain that the main parts of the work are noticed. This movement is achieved through placement of elements so that the eye follows a certain path, such as the curve of a line, the contours of a shape, or the repetition of a certain colors, textures, or shapes.</p>"
+		},
+		"Rhythm": {
+			"title": "Rhythm",
+			"deflarge": "<p>Rhythm is created by <em>the careful placement of repeated elements in a design to cause a visual tempo or beat.</em></p><p>These repeated elements invite the viewers eyes to jump rapidly or glide smoothly from one to the next. The same shape may be repeated several times and arranged across the picture to create the sensation of movement in a certain direction.</p>"
+		},
+		"Proportion": {
+			"title": "Proportion",
+			"deflarge": "<p>Proporation is <em>the principle of art concerned with the relationship of certain elements to the whole and to each other.</em></p><p>Proportion often is closely connected with emphasis. If in a certain proportion of a design, there are more intense hues than dull hues, or more rough textures than smooth, emphasis is suggested. In a similar manner, the large size of one shape compared with the smaller sizes of other shapes creates visual emphasis.</p><p>The viewers eye is automatically attracted to the larger, dominant shape.</p>"
+		}
+	}
+}

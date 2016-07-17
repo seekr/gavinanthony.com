@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Define: Design</title>
+	<script type="text/javascript" src="//use.typekit.net/tfx1zub.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery.min.js"></script>
+	<script>
+		$(function(){
+		
+			
+			//JSON Time ;)
+			
+			$.getJSON("list.json",function(data){
+				
+				$("#links").append("<ul />");
+				
+				for(obj in data) {
+					console.log(obj);
+					$("#links ul").append("<li class='header subhead"+obj+"'><a href='#' class='togglerclass' data-element='"+obj+"'>"+obj+"<div></div></a></li>");
+					$.each(data[obj],function(key,val){
+						$("#links ul").append("<li><a href='#' class='bingbong sub"+obj+"' data-title='"+val.title+"' data-defsmall='"+val.defsmall+"' data-deflarge='"+val.deflarge+"'>"+key+"<div></div></a></li>");
+					});
+					
+					$(".subprinciples").parent("li").hide(); // Reset Time ;)
+					
+					var activetab = "elements";
+					$(".header.subheadelements div").addClass("rotated");
+				}
+				
+			});
+			// Click Time ;)
+			
+			$("#links").delegate('.bingbong','click',function(){
+				//set variables
+				var atitle = $(this).data("title"),
+					adeflarge = $(this).data("deflarge"),
+					fadetime = 250;
+					
+				//fadeout
+				$("#content").fadeOut(fadetime);
+					
+				function workmagic() {
+					$("#content h1").delay().text(atitle);
+					$("#content p").remove();
+					$("#content").append(adeflarge);
+				}
+				//fadein again
+				setTimeout(workmagic, fadetime);
+				$("#content").delay(fadetime).fadeIn(fadetime);
+				
+				return false;
+			});
+			
+			$("#links").delegate('.togglerclass','click',function(){
+				//set variables
+				var aelement = $(this).data("element"),
+					fadetime = 250;
+				
+				$(".header div").removeClass("rotated");
+				if(aelement != "elements") {
+					$("#links ul li a.subelements").parent("li").hide();
+					$("#links ul li a.subprinciples").parent("li").show();
+					activetab = "principles";
+					$(".header.subheadprinciples div").addClass("rotated");
+				}
+				if(aelement != "principles") {
+					$("#links ul li a.subprinciples").parent("li").hide();
+					$("#links ul li a.subelements").parent("li").show();
+					activetab = "elements";
+					$(".header.subheadelements div").addClass("rotated");
+				}	
+				return false;
+			});
+			
+		}); // function
+	</script>
+</head>
+<body>
+	<section id="top" class="wrapper">
+		<header>
+			<!--<h1>DEFINE: <em>Design</em></h1>-->
+			<div class="logo"><div></div></div>
+		</header>
+		<section class="realcontent">
+			<nav id="links">
+				<!--
+				<ul>
+					
+					<li class="header">Header</li>
+					<li><a href="">Links <div></div></a></li>
+					
+					
+				</ul> -->
+			</nav>
+			
+			<article id="content">
+				<h1>What is design?</h1>
+				<p>Design - <em>a skillful blend of the elements and principles of art</em> - results when all of the parts hold together to produce the best possible effect.</p>
+				
+				<p>Without this overall principle of unity, the work would "fall apart" or appear disorganized and confusing to the view.</p>
+				
+				<p>In order to understand the aesthetics of design, you need to know how the principles of art are used. Learning the principles of art will help you recognize and enjoy one of the most fascinating things about works of art: how they are put together.
+			</article>
+			
+			<div class="clear"></div>
+		</section>
+		<footer>
+			A little site by <a href="/">Gavin Anthony</a>.
+		</footer>
+	</section>
+</body>
+</html>
