@@ -1,0 +1,313 @@
+/**
+ *
+ */
+
+h1 {
+	padding: 80px 0 40px;
+
+	font-size: 40px;
+	line-height: 48px;
+	color: #505762;
+}
+	.search h1 {
+		padding: 60px 0;
+	}
+
+
+#top {
+	overflow: hidden;
+	height: 500px;
+
+	background: url(/assets/bluebg.jpg) no-repeat;
+	background-position: center bottom;
+}
+	#top .headertext {
+		text-align: center;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100px;
+		top:50%;
+		margin-top: -50px;
+	}
+	#top .headertext * {
+		color: white;
+		line-height: 1;
+		margin: 0;
+		padding: 0;
+	}
+	#top .headertext h1 {
+		font-size: 3.5rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	#top .headertext h2 {
+		margin-top: 10px;
+		font-size: 2rem;
+		font-family: "ff-tisa-web-pro";
+	}
+	#top a {
+		float: left;
+
+		font-size: 13px;
+		font-weight: 500;
+		text-decoration: none;
+
+		color: #8895a7;
+	}
+		#top #logo:hover, #top ul a:hover, #top ul .active a, .posts .items li:first-child h2 a:hover, p a:hover {
+			color: #4171b1;
+		}
+	#top ul {
+		list-style: none;
+		float: right;
+	}
+		#top ul li {
+			float: left;
+			padding-left: 40px;
+		}
+		#top ul a {
+			display: inline-block;
+			color: #555f6d;
+		}
+		#top ul img {
+			display: inline-block;
+			vertical-align: middle;
+
+			position: relative;
+			top: -2px;
+
+			width: 16px;
+			height: 16px;
+
+			opacity: .4;
+		}
+			#top ul a:hover img {
+				opacity: .7;
+			}
+			#top ul a.active img {
+				opacity: 1;
+			}
+
+/**
+ *   Index page listing, category listing, search page results
+ */
+.items {
+	list-style: none;
+}
+	.items > li {
+		padding: 70px 0 60px;
+
+		color: #97aec9;
+		background: #3c4552;
+	}
+		.posts .items > li:first-child {
+			background: #fff !important;
+			padding: 110px 0;
+		}
+			.items li h1 a, .posts .items > li:first-child h2 a {
+				color: #3d4551;
+			}
+	.items h1 {
+		padding: 0 0 8px;
+	}
+		.items h1 a {
+			text-decoration: none;
+		}
+	.items h2 {
+		font-size: 32px;
+		line-height: 41px;
+	}
+		.items h2 a {
+			display: block;
+			padding-bottom: 12px;
+
+			color: #fff;
+			color: rgba(176,200,236,.8);
+
+			text-decoration: none;
+		}
+			.items h2 a:hover {
+				color: #fff;
+			}
+	.items .content {
+		padding: 10px 0 0;
+	}
+		.items .content p {
+			padding-bottom: 15px;
+		}
+
+/**
+ *   Pagination
+ */
+.pagination {
+	overflow: hidden;
+	padding: 30px 0;
+	margin-bottom: 50px;
+
+	border-top: 1px solid rgba(22,36,54,.1);
+	border-bottom: 1px solid rgba(22,36,54,.1);
+}
+	.pagination:empty {
+		display: none;
+	}
+	.pagination a {
+		float: left;
+		text-decoration: none;
+
+		font-size: 13px;
+		font-weight: 500;
+
+		color: #6f7b8b;
+	}
+		.pagination a:hover {
+			color: #3c4857;
+		}
+	.pagination a.next {
+		float: right;
+	}
+
+/**
+ *   Give some extra space to single-page wrappers
+ */
+.content.wrap {
+	padding-bottom: 50px;
+}
+	.content.wrap ul, .content.wrap ol, .items li ul {
+		padding: 20px 30px;
+	}
+		.content.wrap ul ul, .content.wrap ol ol, .items li ul ul {
+			padding: 0 20px;
+		}
+
+/**
+ *   Footnotes and straplines
+ */
+.footnote, .commentlist time, .items footer {
+	display: block;
+	padding: 5px 0 15px;
+
+	color: #98a2b1;
+	font-size: 14px;
+	font-style: italic;
+	
+	white-space: nowrap;
+}
+	.footnote {
+		padding: 20px 0 40px;
+	}
+
+/**
+ *   Comment form
+ */
+ul.commentlist {
+	margin-bottom: 40px;
+
+	list-style: none;
+	border-top: 1px solid rgba(22,36,54,.1);
+}
+	ul.commentlist .wrap {
+		position: relative;
+	}
+	ul.commentlist li {
+		padding: 40px 0;
+		border-bottom: 1px solid rgba(22,36,54,.1);
+	}
+		ul.commentlist time {
+			font-size: 13px;
+		}
+		ul.commentlist h2 {
+			font-size: 25px;
+			line-height: 33px;
+		}
+		ul.commentlist .counter {
+			position: absolute;
+			right: 0;
+			top: 0;
+
+			font-size: 25px;
+			font-weight: 300;
+			color: #cdd2da;
+		}
+
+#comment {
+	overflow: hidden;
+}
+	#comment label[for] {
+		display: none;
+	}
+	#comment p {
+		float: left;
+		width: 48%;
+		margin-right: 4%;
+		margin-bottom: 10px;
+
+		text-indent: 0;
+	}
+		#comment p + p {
+			margin-right: 0;
+		}
+		#comment p.textarea {
+			float: none;
+			width: 100%;
+		}
+	#comment input, #comment textarea {
+		width: 100%;
+		padding: 10px 15px;
+
+		font-size: 15px;
+		font-weight: normal;
+
+		border: 1px solid rgba(22,36,54,.2);
+		border-radius: 4px;
+	}
+		#comment input:focus, #comment textarea:focus {
+			outline: none;
+			background: #f7f9fc;
+		}
+		#comment textarea {
+			min-height: 150px;
+			max-height: 800px;
+			resize: vertical;
+		}
+	#comment button {
+		display: inline-block;
+		padding: 9px 18px;
+
+		background: #4e82ce;
+		color: #fff;
+
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+
+		font-size: 13px;
+		font-weight: 500;
+	}
+		#comment button:hover {
+			background: #3c6eb7;
+		}
+
+/**
+ *   Footer
+ */
+#bottom {
+	padding: 30px 0 40px;
+}
+	#bottom ul {
+		float: right;
+		list-style: none;
+	}
+		#bottom li {
+			float: left;
+			padding-left: 35px;
+
+			font-size: 14px;
+		}
+		#bottom a {
+			text-decoration: none;
+		}
+		
+
+*{box-sizing:border-box}body{font-family:"jaf-bernino-sans";-webkit-font-smoothing:antialiased}.animate,nav,nav a{transition:all 0.25s ease-in-out;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out}nav{height:70px;background:#f45448;color:white;position:absolute;width:100%;top:0;z-index:100;opacity:1}nav:hover{opacity:1}nav a{display:block;padding:12px;background:rgba(0,0,0,0.2);border-radius:4px;font-size:14px;margin:15px;width:intrinsic;text-transform:uppercase;font-weight:bold;border-bottom:2px solid rgba(0,0,0,0.2);color:white !important;text-decoration:none}nav a:hover{background:rgba(0,0,0,0.3)}nav h1{position:absolute;width:200px;left:50%;margin-left:-100px;text-align:center;z-index:111;top:25px;font-size:20px;font-weight:bold}.navclear{height:70px}.title{text-align:center;margin:20px 0}.title h1{margin:100px 0;font-size:70px;font-weight:bold;text-transform:uppercase}.title p{font-family:"ff-tisa-web-pro";width:70%;margin:100px auto;font-size:16px;color:#777;line-height:1.25}.title p a{color:#5899DA;text-decoration:none}.title p a:hover{text-decoration:underline}.title .rule{height:2px;width:70%;margin:0 auto 100px auto;background:#ddd}.img{width:100%}.img img{width:100%}@media only screen and (max-width: 600px){nav h1{left:45%;right:10%;margin-left:0}.title p,.title .rule{width:90%}}

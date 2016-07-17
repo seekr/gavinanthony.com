@@ -1,0 +1,76 @@
+@import "reset.scss";
+@import "animate.scss";
+
+@function white($opacity){
+	@return rgba(255,255,255,$opacity)
+}
+@function black($opacity){
+	@return rgba(0,0,0,$opacity)
+}
+@mixin animate($time) {
+	transition: all $time ease-in-out;
+	-webkit-transition: all $time ease-in-out;
+	-moz-transition: all $time ease-in-out;
+}
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
+.base-font {
+	font-family: "freight-sans-pro","Helvetica Neue","Helvetica";
+	font-size: 100%;
+	font-weight: normal;
+	@extend .animate;
+}
+.animate {
+	transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+}
+.noselect {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+@-webkit-keyframes shimmer {
+	0% {
+		background-position: 0% top; /*50px*/
+	}
+	
+	70% {
+		background-position: 120% top; /*200px*/
+	}
+	
+	100% {
+		background-position: 200% top; /*200px*/
+	}
+}
+$tisa: "ff-tisa-web-pro","Chaparral Pro","Georgia";
+$freight: "freight-sans-pro";
+$bernino: "jaf-bernino-sans";
+//colors
+$blue-dark: #4A5560;
+$blue-medium: #4682B4;
+$blue: #52A0E1;
+$blue-light: #EBEFF2;
+
+$orange-dark: #604A4A;
+$orange-medium: #FF6347;
+$orange: #FF7F50;
+$orange-light: #FFA07A;
+
+$black: #333;
+$black-medium: #aaa;
+$black-light: #ddd;
+//
+//font sizes
+$font-xlarge:	4rem;
+$font-large:	3rem;
+$font-medium:	2rem;
+$font-normal:	1.2rem;
+$font-small:	1rem;
+$font-xsmall:	.9rem;
+//

@@ -1,0 +1,32 @@
+::selection {
+	background: black;
+	color: white;
+}
+::-moz-selection {
+	background: black;
+	color: white;
+}
+body {
+	font-family: "jaf-bernino-sans";
+	text-align: center;
+}
+.body {
+	display: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px;
+	width: intrinsic;
+	margin: 0 auto;
+	overflow: hidden;
+	* {
+		margin: 20px auto;
+		display: block;
+		width: intrinsic;
+	}
+	.break {
+		width: 20px;
+		height: 3px;
+		background: black;
+		margin: 20px auto;
+	}
+}
