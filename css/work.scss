@@ -1,0 +1,207 @@
+@import "style.scss";
+@mixin whiteText {
+	.text {
+		h1,h2 {
+			color: white;
+		}
+	}
+}
+* {
+	box-sizing: border-box;
+}
+nav {
+	background: transparent;
+	ul.left {
+		li a {
+			span {
+				display: block;
+				background: url(/img/logo.png) no-repeat;
+				background-size: 100%;
+				background-position: center;
+				height: 30px;
+				width:130px;
+				margin: -6px 0 0 0;
+				float: left;
+			}
+		}
+	}
+}
+header {
+	height: 90vh;
+	.arrows {
+		position: absolute;
+		top: 45%;
+		width: 100%;
+		a {
+			opacity: .5;
+			display: block;
+			float: left;
+			position: absolute;
+			left: 5%;
+			@include animate(.2s);
+			&.right {
+				left: auto;
+				right: 5%;
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+		img {
+			display: block;
+			height: 50px;
+		}
+	}
+	.iphones {
+		margin: 30% auto 0 auto;
+		width: 700px;
+		display: block;
+	}
+	.webclip {
+		margin: 30% auto 0 auto;
+		width: 900px;
+		display: block;
+		border-radius: 2px;
+		border: 5px solid rgba(0,0,0,.1);
+		
+	}
+	.text {
+		top: 20%;
+	}
+	&.kiohheader {
+		background: #FF6B63;
+		@include whiteText;
+		overflow: hidden;
+	}
+	&.tapletheader {
+		background: #FF5A39;
+		@include whiteText;
+		overflow: hidden;
+	}
+	&.lightheader {
+		background: #8600FF;
+		@include whiteText;
+		overflow: hidden;
+	}
+	&.blipheader {
+		background: #007EFF;
+		@include whiteText;
+		overflow: hidden;
+	}
+	&.wemontageheader {
+		background: #FF8500;
+		@include whiteText;
+		overflow: hidden;
+	}
+	&.optynheader {
+		background: #1EB0EA;
+		@include whiteText;
+		overflow: hidden;
+	}
+	&.beekeeperheader {
+		background: #5B0DAC;
+		@include whiteText;
+		overflow: hidden;
+	}
+	&.sunsportmarineheader {
+		background: #1A395D;
+		@include whiteText;
+		overflow: hidden;
+	}
+	&.fashionbaseheader {
+		background: #000;
+		@include whiteText;
+		overflow: hidden;
+		height: 45vh;
+		.arrows {
+			top: 22%;
+		}
+	}
+	&.workheader {
+		background: #FF4A44;
+		@include whiteText;
+		overflow: hidden;
+		height: 45vh;
+		.arrows {
+			top: 22%;
+		}
+	}
+}
+.singleImage {
+	width: 90%;
+	margin: 40px auto;
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+.fullImage {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	img {
+		display: block;
+		width: 100%;
+		position: absolute;
+		top:50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+.screens {
+	article {
+		@include span-columns(3);
+		border-bottom: 2px solid #F8F8F8;
+		padding: 30px 0 0 0;
+		img {
+			display: block;
+			width: 100%;
+		}
+		h1 {
+			font-size: 20px;
+			font-weight: 300;
+			color: #646464;
+			line-height: 32px;
+			padding: 10px 0 20px 0;
+		}
+	}
+}
+section.text {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	.leftTitle {
+		@include span-columns(3);
+		h1 {
+			font-weight: 500;
+			text-transform: uppercase;
+			color: #555;
+			line-height: 28px;
+			text-align: left;
+		}
+	}
+	.rightDescription {
+		@include span-columns(9);
+		p {
+			font-size: 16px;
+			color: #898989;
+			line-height: 28px;
+		}
+	}
+}
+.bodyBlack {
+	background: black;
+	.screens article h1 {
+		color: white;
+	}
+	.screens article {
+		border: none;
+	}
+	section.text {
+		* p, * h1 {
+			color: white;
+		}
+	}
+	section.textblock {
+		color: white;
+	}
+}
