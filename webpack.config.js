@@ -2,6 +2,7 @@ const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const SitemapPlugin = require('sitemap-webpack-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
 const chunkFile = isProd ? '[name].[chunkhash]' : '[name]'
@@ -16,6 +17,17 @@ const htmlConfig = {
 const htmlConfig404 = Object.assign({}, htmlConfig, {
   filename: '404.html',
 })
+
+const routes = [
+  '/',
+  '/about',
+  '/contact',
+  '/work/recipelist',
+  '/work/jomo',
+  '/work/taplet',
+  '/work/blip',
+  '/work/likeli',
+]
 
 module.exports = {
   devtool: isProd ? 'cheap-module-source-map' : 'eval-source-map',
@@ -116,5 +128,6 @@ module.exports = {
     }),
     new HtmlWebpackPlugin(htmlConfig),
     new HtmlWebpackPlugin(htmlConfig404),
+    new SitemapPlugin('https://gavinanthony.com', routes),
   ],
 }
