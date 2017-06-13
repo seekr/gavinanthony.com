@@ -10,7 +10,7 @@ const hashFile = isProd ? '[name].[hash:5]' : '[name]'
 const htmlConfig = {
   title: 'Gavin Anthony',
   favicon: 'src/img/favicon.png',
-  template: 'index.ejs',
+  template: 'src/index.ejs',
 }
 
 const htmlConfig404 = Object.assign({}, htmlConfig, {
