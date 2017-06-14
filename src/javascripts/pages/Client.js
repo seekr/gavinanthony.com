@@ -5,6 +5,7 @@ import SVG from 'react-svg-inline'
 import Detail from 'components/Detail'
 import PrevNext from 'components/PrevNext'
 import allClients from 'utils/clients'
+import PageNotFound from '../pages/PageNotFound'
 
 export default class Client extends React.Component {
   static propTypes = {
@@ -17,6 +18,7 @@ export default class Client extends React.Component {
 
   state = {
     slug: this.props.match.params.slug,
+    client: {},
     component: () => null,
     name: '',
     description: '',
@@ -42,6 +44,10 @@ export default class Client extends React.Component {
   updateClient = (slug) => {
     const client = allClients.find(c => c.slug === slug)
 
+    if (!client) {
+      return this.setState({ client })
+    }
+
     this.setState({
       component: client.loadComponent,
       name: client.name,
@@ -61,7 +67,7 @@ export default class Client extends React.Component {
     document.title = `${client.name} | Gavin Anthony`
   }
 
-  render() {
+  renderClient = () => {
     const {
       logo,
       duration,
@@ -107,5 +113,9 @@ export default class Client extends React.Component {
         <PrevNext allClients={allClients} clientId={this.state.order} />
       </div>
     )
+  }
+
+  render() {
+    return this.state.client ? this.renderClient() : <PageNotFound />
   }
 }
