@@ -65,7 +65,7 @@
   --serif: 'G';
 }
 
-@custom-media --mobile (width < 500px);
+@custom-media --mobile (width < 600px);
 
 ::selection {
   background: rgba(255, 255, 255, .3);

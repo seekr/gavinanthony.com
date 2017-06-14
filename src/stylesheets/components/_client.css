@@ -72,6 +72,12 @@
   }
 }
 
+@media (--mobile) {
+  .overview p {
+    margin-bottom: 4rem;
+  }
+}
+
 .client-quote {
   padding: 300px 0;
 
@@ -117,8 +123,14 @@
 
   .content {
     padding: 0 100px;
+  }
 
-    @media (--mobile) {
+  @media (--mobile) {
+    aside {
+      lost-column: 1/1 flex;
+    }
+
+    .content {
       padding: 20px;
     }
   }

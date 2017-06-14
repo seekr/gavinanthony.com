@@ -36,7 +36,7 @@ const Likeli = () =>
           categories based on the heatmap video.
         </blockquote>
         <p>
-          To keep the headlines and video in sync, Window.RequestAnimationFrame
+          To keep the headlines and video in sync, RequestAnimationFrame()
           was used. This kept the two in sync, even if the window became
           inactive, unlike SetTimeout().
         </p>

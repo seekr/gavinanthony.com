@@ -60,6 +60,11 @@
   &:not(.submitted):active {
     background: rgba(255, 255, 255, .35);
   }
+
+  @media (--mobile) {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
 }
 
 .success {
@@ -69,10 +74,14 @@
 .errors {
   animation-duration: 500ms;
   animation-name: fadeIn;
-  background: var(--darkGray);
   color: #ffc700;
   border-radius: 64px;
   font: inherit;
-  padding: 12px 32px;
+  padding: 12px 0;
   transition: .2s all ease-in-out;
+
+  @media (--mobile) {
+    text-align: center;
+    width: 100%;
+  }
 }
