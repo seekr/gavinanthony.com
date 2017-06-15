@@ -2,20 +2,12 @@ nav, footer {
   align-items: center;
   display: flex;
   height: 256px;
-  overflow-x: hidden;
 
   .container {
     display: flex;
     flex-direction: row;
     flex: 1;
     justify-content: space-between;
-  }
-}
-
-@media (--mobile) {
-  nav .container aside, footer .container aside {
-    padding-bottom: 20px;
-    width: 100%;
   }
 }
 
@@ -48,5 +40,21 @@ nav a, footer a {
     &:active {
       background: rgba(255, 255, 255, .35);
     }
+  }
+}
+
+@media (--mobile) {
+  nav .container aside {
+    padding-bottom: 20px;
+  }
+
+  footer .container aside {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+
+  footer a, footer a:first-child {
+    margin: 0 12px 12px;
   }
 }

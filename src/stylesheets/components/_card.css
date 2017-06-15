@@ -62,4 +62,8 @@
   .card {
     lost-column: 1/1;
   }
+
+  .card a {
+    padding: 20px;
+  }
 }
