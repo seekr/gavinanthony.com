@@ -8,7 +8,7 @@
   line-height: calc(1.5rem * 1.25rem);
   margin-bottom: 50px;
 
-  h4 {
+  div > h4 {
     margin-bottom: 1rem;
   }
 
